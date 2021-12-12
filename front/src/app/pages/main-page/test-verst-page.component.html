@@ -1,0 +1,172 @@
+<div class="loginInfoBlock">
+  <span class="hiName">Привет: {{userName}}</span>
+  <span class="buttonLogOut"><button pButton type="button" (click)="clickLogout()" label="Выход" class="p-button-secondary"></button> </span>
+</div>
+<div id="mainBlock" >
+  <div id="controllerBlock">
+    <span class="blockNameCoordinat"><p class="nameCoordinat">Введите значения координат </p></span>
+    <hr>
+    <span class="blockNameCoordinat"><p class="nameCoordinat">X ∈ (-3;5)</p></span>
+    <div class="group">
+      <span class="blockCheckOne">
+      <label for="-3">-3</label>
+    <p-checkbox class="p-checkboxX-" id="-3" name="x" value="-3" [(ngModel)]="pointX"></p-checkbox>
+      </span>
+      <span class="blockCheckOne">
+      <label for="-2">-2</label>
+    <p-checkbox class="p-checkboxX-" id="-2" name="x" value="-2" [(ngModel)]="pointX"></p-checkbox>
+        </span>
+      <span class="blockCheckOne">
+      <label for="-1">-1</label>
+    <p-checkbox class="p-checkboxX-" id="-1" name="x" value="-1" [(ngModel)]="pointX"></p-checkbox>
+      </span>
+      <br>
+      <br>
+
+      <span class="blockCheckOne">
+      <label for="0">0</label>
+    <p-checkbox class="p-checkboxX" id="0"  name="x" value="0" [(ngModel)]="pointX"></p-checkbox>
+        </span>
+      <span class="blockCheckOne">
+      <label for="1">1</label>
+    <p-checkbox class="p-checkboxX" id="1"  name="x" value="1" [(ngModel)]="pointX"></p-checkbox>
+      </span>
+        <span class="blockCheckOne">
+      <label for="2">2</label>
+    <p-checkbox class="p-checkboxX" id="2"  name="x" value="2" [(ngModel)]="pointX"></p-checkbox>
+        </span>
+      <br>
+      <br>
+
+      <label for="3">3</label>
+    <p-checkbox class="p-checkboxX" id="3" name="x" value="3" [(ngModel)]="pointX"></p-checkbox>
+      <label for="4">4</label>
+    <p-checkbox class="p-checkboxX" id="4" name="x" value="4" [(ngModel)]="pointX"></p-checkbox>
+      <label for="5">5</label>
+    <p-checkbox class="p-checkboxX" id="5" name="x" value="5" [(ngModel)]="pointX"></p-checkbox>
+
+    </div>
+
+
+
+    <hr>
+    <span class="blockNameCoordinat"><p class="nameCoordinat">Y∈ (-5;3)</p></span>
+    <p-inputNumber  [(ngModel)]="pointY" [style]="{width: '100%'}" mode="decimal" [minFractionDigits]="1" [maxFractionDigits]="2"  ></p-inputNumber>
+    <hr>
+    <span class="blockNameCoordinat"><p class="nameCoordinat">R ∈ (0;5]</p></span>
+
+
+    <div class="group">
+      <span class="blockCheckOne">
+      <label for="-3r">-3</label>
+    <p-checkbox class="p-checkboxX-" id="-3r" name="r" value="-3" [(ngModel)]="parametrR"></p-checkbox>
+      </span>
+      <span class="blockCheckOne">
+      <label for="-2r">-2</label>
+    <p-checkbox class="p-checkboxX-" id="-2r" name="r" value="-2" [(ngModel)]="parametrR"></p-checkbox>
+        </span>
+      <span class="blockCheckOne">
+      <label for="-1r">-1</label>
+    <p-checkbox class="p-checkboxX-" id="-1r" name="r" value="-1" [(ngModel)]="parametrR"></p-checkbox>
+      </span>
+      <br>
+      <br>
+
+      <span class="blockCheckOne">
+      <label for="0r">0</label>
+    <p-checkbox class="p-checkboxX" id="0r"  name="r" value="0" [(ngModel)]="parametrR"></p-checkbox>
+        </span>
+      <span class="blockCheckOne">
+      <label for="1r">1</label>
+    <p-checkbox class="p-checkboxX" id="1r"  name="r" value="1"  [(ngModel)]="parametrR"></p-checkbox>
+      </span>
+      <span class="blockCheckOne">
+      <label for="2r">2</label>
+    <p-checkbox class="p-checkboxX" id="2r"  name="r" value="2"  [(ngModel)]="parametrR"></p-checkbox>
+        </span>
+      <br>
+      <br>
+
+      <label for="3r">3</label>
+      <p-checkbox class="p-checkboxX" id="3r" name="r" value="3" [(ngModel)]="parametrR"></p-checkbox>
+      <label for="4r">4</label>
+      <p-checkbox class="p-checkboxX" id="4r" name="r" value="4" [(ngModel)]="parametrR"></p-checkbox>
+      <label for="5r">5</label>
+      <p-checkbox class="p-checkboxX" id="5r" name="r" value="5" [(ngModel)]="parametrR"></p-checkbox>
+
+    </div>
+    <hr>
+  <p class="errorText">{{errorText}}</p>
+
+
+
+
+
+
+
+
+
+
+    <button (click)="clickSend()" class="buttonSend" pButton type="button" label="Отправить"></button>
+  </div>
+
+  <div id="k" class="blockForImage">
+    <svg (click)="clickOnSVG($event)" viewbox=" 0 0 400 400" id="svg-area" xmlns="http://www.w3.org/2000/svg" >
+      <g jsfc="ui:repeat" value="#{mcc.results}" var="checkCoordinat">
+        <circle r="5" cx="#{checkCoordinat.svgX}" cy="#{checkCoordinat.svgY}" fill="#{checkCoordinat.chooseColor}"></circle>-->
+      </g>
+      <line x1="0%" y1="50%" x2="100%" y2="50%" stroke="black" />
+      <line x1="50%" y1="0%" x2="50%" y2="100%" stroke="black" />
+      <text x="50%" y="2%" class="mal">Y</text>
+      <text x="94%" y="49%" class="mal">X</text>
+      <text x="48%" y="10%" class="mal">-- R</text>
+      <text x="48%" y="30%" class="mal">-- R/2</text>
+      <text x="48%" y="70%" class="mal">-- -R/2</text>
+      <text x="48%" y="90%" class="mal">-- -R</text>
+      <text x="10%" y="51%" class="mal">|</text>
+      <text x="30%" y="51%" class="mal">|</text>
+      <text x="50%" y="51%" class="mal">0</text>
+      <text x="70%" y="51%" class="mal">|</text>
+      <text x="90%" y="51%" class="mal">|</text>
+      <text x="7%" y="48%" class="mal">-R</text>
+      <text x="27%" y="48%" class="mal">-R/2</text>
+      <text x="67%" y="48%" class="mal">R/2</text>
+      <text x="87%" y="48%" class="mal">R</text>
+      <polygon fill="#4169E1" fill-opacity="0.6" points="200,200 40,200 40,35 200,35"></polygon>
+      <polygon fill="#4169E1" fill-opacity="0.6" points="200,200 283,200 200,357"></polygon>
+      <g transform="rotate(-90 200 200)">
+        <path d="M 200 40 C 115 47 50 80 37 200 L 200 200 Z" fill="#4169E1" fill-opacity="0.6"></path>
+
+      </g>
+      <circle *ngFor="let pointa of pointTable" r="7"  attr.cx="{{getKordX(pointa.x)}}" attr.cy="{{getKordY(pointa.y)}}" attr.fill="{{getFill(pointa.income)}}"></circle>
+
+    </svg>
+
+
+  </div>
+</div>
+<br>
+
+
+<div *ngIf="!validationR()" class="blockRError">
+  <p class="ErrorRtetx">Для дальнейшей работы выберите корректное значение R</p>
+</div>
+
+<table class="blockAnswer">
+
+  <tr>
+    <th>x</th>
+    <th>y</th>
+    <th>r</th>
+    <th>Попал ли в одз</th>
+  </tr>
+   <tr *ngFor="let point of pointTable">
+     <th>{{point.x}}</th>
+     <th>{{point.y}}</th>
+     <th>{{point.r}}</th>
+     <th>{{point.income}}</th>
+   </tr>
+</table>
+<div class="blockForButtonCelear">
+  <button  pButton type="button" label="Отчистить таблицу" (click)="clearPoint()" class="p-button-danger clearTable"></button>
+</div>

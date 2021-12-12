@@ -1,0 +1,67 @@
+<div id="hiBlock" >
+
+    <div class="blockIn">
+      <div  class="mainInformation">
+        <div *ngIf="visibalStartinfo" class="startInfo">
+
+          <div class="hiText">
+            <p>Для начала нужно авторизоваться</p>
+          </div>
+
+          <button  (click)="startIn()"  pButton type="button" label="{{btnIn}}" class="p-button-success"></button>
+          <br>
+          <button (click)="startReg()"  pButton type="button" label="{{btnRegi}}"></button>
+        </div>
+        <div *ngIf="visibalReg" class="registration">
+          <div class="hiText"><p>Регистрация </p>
+
+          </div>
+          <div class="userNameBlock">
+          <span class="p-float-label">
+            <input class="login-page__input"  [(ngModel)]="usernameR"   type="text" pInputText
+                   minlength="4"/>
+            <label [ngStyle]="{fontSize: 'larger'}">Username</label>
+          </span>
+          </div>
+          <div class="passwordBlock">
+          <span  class="p-float-label" >
+            <input   [(ngModel)]="passwordR"  type="password" pInputText
+                   minlength="4"/>
+            <label [ngStyle]="{fontSize: 'larger'}">Password</label>
+          </span>
+          </div>
+          <p class="errorString">{{error}}</p>
+          <button (click)="register(usernameR,passwordR)"  pButton type="button" label="{{btnRegi}}"></button>
+          <button (click)="backInfo()" pButton type="button" label="Назад" class="p-button-danger"></button>
+        </div>
+        <div *ngIf="visibalIn" class="In">
+          <div class="hiText"><p>Вход </p>
+
+          </div>
+          <div class="userNameBlock">
+          <span class="p-float-label">
+            <input class="login-page__input"  [(ngModel)]="username"    type="text" pInputText
+                   minlength="4"/>
+            <label [ngStyle]="{fontSize: 'larger'}">Username</label>
+          </span>
+          </div>
+          <div class="passwordBlock">
+          <span  class="p-float-label" >
+            <input   type="password"  [(ngModel)]="password" pInputText
+                     minlength="4"/>
+            <label [ngStyle]="{fontSize: 'larger'}">Password</label>
+          </span>
+          </div>
+          <p class="errorString">{{error}}</p>
+          <button  (click)="auth(username, password)"  pButton type="button" label="{{btnIn}}" class="p-button-success"></button>
+          <button (click)="backInfo()" pButton type="button" label="Назад" class="p-button-danger"></button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+</div>
