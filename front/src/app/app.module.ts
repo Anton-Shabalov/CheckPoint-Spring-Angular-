@@ -19,6 +19,7 @@ import { StartPageComponent } from './pages/start-page/start-page.component';
 import { TestVerstPageComponent } from './pages/main-page/test-verst-page.component';
 import {CheckboxModule} from 'primeng/checkbox';
 
+
 @NgModule({
   declarations: [
     AppComponent,

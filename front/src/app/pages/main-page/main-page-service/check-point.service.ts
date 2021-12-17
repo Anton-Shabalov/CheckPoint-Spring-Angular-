@@ -8,9 +8,11 @@ import { Observable } from 'rxjs';
 })
 export class CheckPointService {
 
+  // tslint:disable-next-line:variable-name
   constructor(private _http: Http) {
   }
 
+  // tslint:disable-next-line:typedef
   public checkPoints(data: any) {
     return this._http.post('http://localhost:21232/checkPoint', data).pipe(
       map(res => res.json(),
@@ -19,7 +21,8 @@ export class CheckPointService {
     );
   }
 
+  // tslint:disable-next-line:typedef
   public handleError(err: any) {
-    Observable.throw(err || 'ERROR 500')
+    Observable.throw(err || 'ERROR 500');
   }
 }

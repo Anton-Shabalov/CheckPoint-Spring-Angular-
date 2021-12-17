@@ -26,6 +26,7 @@ export class TestVerstPageComponent implements OnInit {
 
   constructor(private test:AuthGuard,private _dropAll: DeleteAllPointsService, private _tokenService: TokenService, private _getPointService: GetPointsService, private _checkPointService: CheckPointService, private _router: Router) {
    this.pointY=0;
+
   }
 
   ngOnInit(): void {

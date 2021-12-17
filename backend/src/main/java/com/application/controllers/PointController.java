@@ -18,8 +18,6 @@ import java.util.Map;
 
 
 @RestController
-@Slf4j
-
 public class PointController {
 
     private final PointService pointService;
