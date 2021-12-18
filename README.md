@@ -1,5 +1,5 @@
 # CheckPoint-Spring-Angular-
-Демонстрация работы приложени https://youtu.be/uxJHatBkG0k
+Демонстрация работы приложени https://youtu.be/7YKHkJTTwSE
 
 <br\>
 Уровень back-end  основан на Spring.
