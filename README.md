@@ -1,7 +1,6 @@
 # CheckPoint-Spring-Angular-
 Демонстрация работы приложени https://youtu.be/7YKHkJTTwSE
 
-<br\>
 Уровень back-end  основан на Spring.
 Уровень front-end построен на Angular  с использованием набора компонентов PrimeNG
 Взаимодействие между уровнями back-end и front-end организовано посредством REST API.
